@@ -28,7 +28,7 @@ Sound:Play()
 
 
 --[ Natural Disaster ]
---[ Início,  CRIAR Menu ]
+--[ In獳io,  CRIAR Menu ]
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
 
 
@@ -48,11 +48,11 @@ local Aba2 = Window:NewTab("Game")
 local Aba3 = Window:NewTab("Teleport")
 local Aba4 = Window:NewTab("Others")
 local Aba5 = Window:NewTab("Ui Hub")
-local Aba6 = Window:NewTab("Créditos")
+local Aba6 = Window:NewTab("Cr嶮itos")
 
 
 
---[ Determinadores de "botões" e "toggles" ! ] 
+--[ Determinadores de "bot髊s" e "toggles" ! ] 
 local PlaySection = Aba1:NewSection("player 'you'")
 local GamSection = Aba2:NewSection("Natural Disaster")
 local TelSection = Aba3:NewSection("Teleports")
@@ -66,7 +66,7 @@ local CreSection = Aba6:NewSection("Liver zMods")
 
 
 
---[ "Botões" e "toggles" do "PlaySection" ] 
+--[ "Bot髊s" e "toggles" do "PlaySection" ] 
 PlaySection:NewSlider("WalkSpeed", "run faster", 450, 16, function(number)
 game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = number
 end)
@@ -184,7 +184,7 @@ end)
 
 
 
---[ "Botões" e "toggles" do "GamSection" ] 
+--[ "Bot髊s" e "toggles" do "GamSection" ] 
 GamSection:NewToggle("Spam Sound", "and very annoying that, wait, you're really going to do this!", function(State1)
         getgenv().hit = State1
         while wait(0.2) do
@@ -287,7 +287,7 @@ end)
 
 
  
---[ "Botões" e "toggles" do "TelSection" ] 
+--[ "Bot髊s" e "toggles" do "TelSection" ] 
 TelSection:NewButton("Teleport to Lob", "TP", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-243, 194, 331)
 end)
@@ -316,7 +316,7 @@ end)
 
 
 
---[ "Botões" e "toggles" do "OthSection" ] 
+--[ "Bot髊s" e "toggles" do "OthSection" ] 
     OthSection:NewButton("F3X ( TOOL )", "and useful", function()
         loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
     end)
