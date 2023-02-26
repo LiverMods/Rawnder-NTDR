@@ -168,6 +168,83 @@ game.StarterGui:SetCore("SendNotification", {
     end
   end)
 end)
+
+PlaySection:NewButton("Stay Small", "The avatar must be small beforehand!", function()
+spawn(function()
+
+if game.PlaceId == 189707 then
+
+ spawn(function()
+local message = Instance.new("Message",workspace)
+message.Text = "Loading ..."
+wait(6)
+message:Destroy()
+end)                 task.wait(2)
+
+spawn(function()
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Character = LocalPlayer.Character
+local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+local function rm()
+	for i,v in pairs(Character:GetDescendants()) do
+		if v:IsA("BasePart") then
+			if v.Name ~= "Head" then
+				for i,cav in pairs(v:GetDescendants()) do
+					if cav:IsA("Attachment") then
+						if cav:FindFirstChild("OriginalPosition") then
+							cav.OriginalPosition:Destroy()
+						end
+					end
+				end
+				v:FindFirstChild("OriginalSize"):Destroy()
+				if v:FindFirstChild("AvatarPartScaleType") then
+					v:FindFirstChild("AvatarPartScaleType"):Destroy()
+				end
+			end
+		end
+	end
+end
+
+rm()
+wait(0.45)
+Humanoid:FindFirstChild("BodyTypeScale"):Destroy()
+wait(1)
+
+rm()
+wait(0.45)
+Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+wait(0.5)
+
+rm()
+wait(0.45)
+Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+wait(0.5)
+
+rm()
+wait(0.45)
+Humanoid:FindFirstChild("HeadScale"):Destroy()
+end)
+wait(0.5)
+
+spawn(function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 40
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 22
+end)    
+             task.wait(0.15)
+             
+
+spawn(function()
+game.StarterGui:SetCore("SendNotification", {
+	Title = "loaded";
+	Text = "Success";
+        Duration = 5;
+})
+      end)
+    end
+  end)
+end)
+
 PlaySection:NewButton("Remove Fall Damage", "take no damage from that", function()
 while wait() do
 game:GetService("Workspace")[game.Players.LocalPlayer.Name].FallDamageScript:Destroy()
