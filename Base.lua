@@ -28,7 +28,7 @@ Sound:Play()
 
 
 --[ Natural Disaster ]
---[ In獳io,  CRIAR Menu ]
+--[ Iníco,  CRIAR Menu ]
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
 
 
@@ -36,7 +36,7 @@ local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
 
 
 --[ Nome, Cor ] 
-local Window = Library.CreateLib("{ I - Rawnder } Natural Disaster", "BloodTheme")
+local Window = Library.CreateLib("{ II - Rawnder } Natural Disaster", "BloodTheme")
 
 
 
@@ -48,11 +48,11 @@ local Aba2 = Window:NewTab("Game")
 local Aba3 = Window:NewTab("Teleport")
 local Aba4 = Window:NewTab("Others")
 local Aba5 = Window:NewTab("Ui Hub")
-local Aba6 = Window:NewTab("Cr嶮itos")
+local Aba6 = Window:NewTab("Credits")
 
 
 
---[ Determinadores de "bot髊s" e "toggles" ! ] 
+--[ Determinadores de "bot?s" e "toggles" ! ] 
 local PlaySection = Aba1:NewSection("player 'you'")
 local GamSection = Aba2:NewSection("Natural Disaster")
 local TelSection = Aba3:NewSection("Teleports")
@@ -66,7 +66,7 @@ local CreSection = Aba6:NewSection("Liver zMods")
 
 
 
---[ "Bot髊s" e "toggles" do "PlaySection" ] 
+--[ "Botões" e "toggles" do "PlaySection" ] 
 PlaySection:NewSlider("WalkSpeed", "run faster", 450, 16, function(number)
 game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = number
 end)
@@ -184,7 +184,7 @@ end)
 
 
 
---[ "Bot髊s" e "toggles" do "GamSection" ] 
+--[ "Botões" e "toggles" do "GamSection" ] 
 GamSection:NewToggle("Spam Sound", "and very annoying that, wait, you're really going to do this!", function(State1)
         getgenv().hit = State1
         while wait(0.2) do
@@ -241,8 +241,8 @@ game:GetService("Players").LocalPlayer.CharacterAdded:connect(
 end
 end)
  
-GamSection:NewButton("Auto Green Balloon", "Free Green Balloon 'May Crash'", function()
-    local player = tostring(game.Players.LocalPlayer.Name)
+GamSection:NewButton("Green Balloon", "Free Green Balloon", function()
+       local player = tostring(game.Players.LocalPlayer.Name)
 while true do
 if game.Workspace:FindFirstChild("GreenBalloon") then
 if not game.Workspace[player]:FindFirstChild("GreenBalloon") and not game.Players.LocalPlayer.Backpack:FindFirstChild("GreenBalloon") then
@@ -287,7 +287,7 @@ end)
 
 
  
---[ "Bot髊s" e "toggles" do "TelSection" ] 
+--[ "Botões" e "toggles" do "TelSection" ] 
 TelSection:NewButton("Teleport to Lob", "TP", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-243, 194, 331)
 end)
@@ -316,7 +316,7 @@ end)
 
 
 
---[ "Bot髊s" e "toggles" do "OthSection" ] 
+--[ "Botões" e "toggles" do "OthSection" ] 
     OthSection:NewButton("F3X ( TOOL )", "and useful", function()
         loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
     end)
@@ -389,7 +389,7 @@ TextButton.Size = UDim2.new(0, 90, 0, 30)
 TextButton.Font = Enum.Font.Kalam
 TextButton.Text = "OPEN"
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 22.000
+TextButton.TextSize = 26.000
 TextButton.MouseButton1Click:connect(function()
 Frame.Visible = false
 Frame2.Visible = true    
@@ -410,7 +410,7 @@ TextButton2.Size = UDim2.new(0, 90, 0, 30)
 TextButton2.Font = Enum.Font.Kalam
 TextButton2.Text = "CLOSE"
 TextButton2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton2.TextSize = 22.000
+TextButton2.TextSize = 26.000
 TextButton2.MouseButton1Click:connect(function()
     Frame2.Visible = false
     Frame.Visible = true
