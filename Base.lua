@@ -228,8 +228,8 @@ end)
 wait(0.5)
 
 spawn(function()
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = 40
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 22
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 31
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 24
 end)    
              task.wait(0.15)
              
