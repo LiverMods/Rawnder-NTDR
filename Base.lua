@@ -52,7 +52,7 @@ local Aba6 = Window:NewTab("Credits")
 
 
 
---[ Determinadores de "bot?s" e "toggles" ! ] 
+--[ Determinadores de "botões" e "toggles" ! ] 
 local PlaySection = Aba1:NewSection("player 'you'")
 local GamSection = Aba2:NewSection("Natural Disaster")
 local TelSection = Aba3:NewSection("Teleports")
@@ -151,6 +151,76 @@ wait(0.3)
 spawn(function()
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 78
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 45
+end)    
+             task.wait(0.15)
+             
+while wait() do
+game:GetService("Workspace")[game.Players.LocalPlayer.Name].FallDamageScript:Destroy()
+end
+
+spawn(function()
+game.StarterGui:SetCore("SendNotification", {
+	Title = "loaded";
+	Text = "Success";
+        Duration = 5;
+})
+      end)
+    end
+  end)
+end)
+
+PlaySection:NewButton("Get High V2", "Get High", function()
+spawn(function()
+
+if game.PlaceId == 189707 then
+
+ spawn(function()
+local message = Instance.new("Message",workspace)
+message.Text = "Loading ..."
+wait(6)
+message:Destroy()
+end)                 task.wait(2)
+
+spawn(function()
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Character = LocalPlayer.Character
+local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
+function rm()
+	for i,v in pairs(Character:GetDescendants()) do
+		if v:IsA("BasePart") then
+			if v.Name == "Handle" or v.Name == "Head" then
+				if Character.Head:FindFirstChild("OriginalSize") then
+					Character.Head.OriginalSize:Destroy()
+				end
+			else
+				for i,cav in pairs(v:GetDescendants()) do
+					if cav:IsA("Attachment") then
+						if cav:FindFirstChild("OriginalPosition") then
+							cav.OriginalPosition:Destroy()  
+						end
+					end
+				end
+				v:FindFirstChild("OriginalSize"):Destroy()
+				if v:FindFirstChild("AvatarPartScaleType") then
+					v:FindFirstChild("AvatarPartScaleType"):Destroy()
+				end
+			end
+		end
+	end
+end
+
+rm()
+wait(0.2)
+Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
+wait(1)
+
+end)
+wait(0.3)
+
+spawn(function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 60
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 19
 end)    
              task.wait(0.15)
              
@@ -466,7 +536,7 @@ TextButton.Size = UDim2.new(0, 90, 0, 30)
 TextButton.Font = Enum.Font.Kalam
 TextButton.Text = "OPEN"
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 26.000
+TextButton.TextSize = 27.500
 TextButton.MouseButton1Click:connect(function()
 Frame.Visible = false
 Frame2.Visible = true    
@@ -487,7 +557,7 @@ TextButton2.Size = UDim2.new(0, 90, 0, 30)
 TextButton2.Font = Enum.Font.Kalam
 TextButton2.Text = "CLOSE"
 TextButton2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton2.TextSize = 26.000
+TextButton2.TextSize = 27.500
 TextButton2.MouseButton1Click:connect(function()
     Frame2.Visible = false
     Frame.Visible = true
